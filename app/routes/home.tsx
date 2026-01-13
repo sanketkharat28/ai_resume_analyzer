@@ -1,5 +1,6 @@
 import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
+import ResumeCard from "~/components/ResumeCard";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,5 +18,9 @@ export default function Home() {
         <h2>Review your submissions and check AI powered feedback</h2>
       </div>
     </section>
+
+  
+
+    
   </main>
 }
