@@ -33,11 +33,11 @@ export default function Auth() {
               ) : (
                 <>
                 {auth.isAuthenticated ? (
-                  <button className="auto-button" onClick={auth.signOut}>
+                  <button className="auth-button" onClick={auth.signOut}>
                     Log Out
                   </button>
                 ) : (
-                  <button className="auto-button" onClick={auth.signIn}>
+                  <button className="auth-button" onClick={auth.signIn}>
                     Log In
                   </button>
                 )}
