@@ -2,6 +2,7 @@ import React, { useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router';
 import FileUploader from '~/components/FileUploader';
 import Navbar from '~/components/Navbar'
+import { convertPdfToImage } from '~/lib/pdf2img';
 import { usePuterStore } from '~/lib/puter';
 
 const upload = () => {
@@ -21,7 +22,7 @@ const handleAnalyze = async({companyName, jobTitle, jobDescription, file}:{compa
     const uploadFile = await fs.upload([file]);
     if(!uploadFile) return setStatusText('Error : Failed to upload file');
     setStatusText('Converting to image....');
-    const imageFile = await convertPdftoImage(file);
+    const imageFile = await convertPdfToImage(file);
 }
 
 
