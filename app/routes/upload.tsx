@@ -1,11 +1,22 @@
 import React, { useState, type FormEvent } from 'react'
 import FileUploader from '~/components/FileUploader';
 import Navbar from '~/components/Navbar'
+import { usePuterStore } from '~/lib/puter';
 
 const upload = () => {
+
 const [isProcessing, setIsProcessing] = useState(false);
 const [statusText, setStatusText] = useState('');
+const [file, setFile] = useState<File | null>(null)
+
+const handleFileSelect = (file : File | null) => {
+    setFile(file);    
+}
+
+
+
 const handlesubmit = (e:FormEvent<HTMLFormElement>)=> {
+
 
 }
 
@@ -40,7 +51,7 @@ const handlesubmit = (e:FormEvent<HTMLFormElement>)=> {
                 </div>
                 <div className="form-div">
                     <label htmlFor="uploader">Upload Resume</label>
-                    <FileUploader/>
+                    <FileUploader onFileSelect={handleFileSelect}/>
                 </div>
                 <button className='primary-button' type='submit'>
                     Analyse resume
