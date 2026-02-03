@@ -1,9 +1,11 @@
+import { generateKey } from 'crypto';
 import React, { useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router';
 import FileUploader from '~/components/FileUploader';
 import Navbar from '~/components/Navbar'
 import { convertPdfToImage } from '~/lib/pdf2img';
 import { usePuterStore } from '~/lib/puter';
+import { generateUUID } from '~/lib/utils';
 
 const upload = () => {
 const {auth, isLoading, fs, ai, kv} = usePuterStore();
@@ -21,8 +23,18 @@ const handleAnalyze = async({companyName, jobTitle, jobDescription, file}:{compa
     setStatusText("uploading the file......");
     const uploadFile = await fs.upload([file]);
     if(!uploadFile) return setStatusText('Error : Failed to upload file');
+
     setStatusText('Converting to image....');
     const imageFile = await convertPdfToImage(file);
+    if(!imageFile.file) return setStatusText('Error : Failed to convert pdf to an image');
+
+    setStatusText('Uploading the image....');
+    const uploadedImage = await fs.upload([imageFile.file]);
+    if(!uploadFile) return setStatusText("failed to upload image");
+
+    setStatusText('preparing data....');
+
+    const uuid = generateUUID();
 }
 
 
