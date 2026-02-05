@@ -9,7 +9,18 @@ export function formatSize(bytes:number): string {
     const sizes = ['Bytes', 'KB', 'MB', 'GB', "TB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) +  ' ' + sizes[i];
-
 }
 
-export const generateUUID = ()=> crypto.randomUUID();
+export const generateUUID = () => {
+    // Try to use crypto.randomUUID if available (secure contexts)
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+        return crypto.randomUUID();
+    }
+    
+    // Fallback: Generate a UUID v4 manually
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+};
