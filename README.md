@@ -1,87 +1,161 @@
-# Welcome to React Router!
+# AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+An intelligent, AI-powered resume analysis platform built with React Router that helps job seekers optimize their resumes for better ATS (Applicant Tracking System) compatibility and job matching success.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+![AI Resume Analyzer](https://img.shields.io/badge/React-Router-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
-## Features
+## 🌟 Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **🤖 AI-Powered Analysis**: Leverage advanced AI to analyze resume content and provide detailed feedback
+- **📊 ATS Score**: Get instant ATS compatibility scores to understand how your resume performs with automated screening systems
+- **💼 Job Matching**: Match your resume against specific job descriptions for tailored feedback
+- **📝 Actionable Insights**: Receive categorized suggestions for improvement including:
+  - Skills analysis and recommendations
+  - Content and structure optimization
+  - Keyword optimization
+  - Format and readability improvements
+- **🔒 Secure Storage**: Upload and store multiple resumes securely
+- **📱 Responsive Design**: Fully responsive interface that works seamlessly across all devices
+- **⚡ Fast & Modern**: Built with cutting-edge technologies for optimal performance
 
-## Getting Started
+## 🚀 Tech Stack
 
-### Installation
+- **Frontend Framework**: React with React Router v7
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **Build Tool**: Vite
+- **AI Integration**: AI-powered resume analysis engine
+- **PDF Processing**: PDF parsing and extraction capabilities
 
-Install the dependencies:
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v18 or higher)
+- **npm** or **yarn** or **pnpm**
+- **Git**
+
+## 🛠️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sanketkharat28/ai_resume_analyzer.git
+cd ai_resume_analyzer
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+### 3. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Your application will be available at `http://localhost:5173`
 
-## Building for Production
+## 📖 Usage
 
-Create a production build:
+### Uploading a Resume
+
+1. Navigate to the **Upload Resume** section
+2. Fill in job details (title, description, required skills)
+3. Upload your resume in PDF format
+4. Click **Analyze** to process your resume
+
+### Viewing Analysis
+
+After analysis, you'll receive:
+- **Overall ATS Score**: Percentage-based compatibility score
+- **Skills Match**: How well your skills align with job requirements
+- **Missing Keywords**: Important keywords to add to your resume
+- **Improvement Suggestions**: Specific, actionable recommendations
+- **Structure Analysis**: Feedback on resume format and organization
+
+## 🏗️ Project Structure
+
+```
+ai_resume_analyzer/
+├── app/
+│   ├── components/       # Reusable UI components
+│   ├── routes/          # Route components and pages
+│   ├── lib/             # Utility functions and helpers
+│   └── app.css          # Global styles
+├── constants/           # Static data and configurations
+├── types/              # TypeScript type definitions
+├── public/             # Static assets
+├── package.json        # Project dependencies
+├── vite.config.ts      # Vite configuration
+├── tsconfig.json       # TypeScript configuration
+└── README.md          # Project documentation
+```
+
+## 🔧 Available Scripts
 
 ```bash
+# Start development server
+npm run dev
+
+# Build for production
 npm run build
+
+# Preview production build
+npm run preview
+
+# Run linter
+npm run lint
+
+# Run type checking
+npm run typecheck
 ```
 
-## Deployment
+## 📝 Future Enhancements
 
-### Docker Deployment
+- [ ] Support for multiple resume formats (DOC, DOCX)
+- [ ] Resume template suggestions
+- [ ] Industry-specific analysis
+- [ ] Cover letter analysis
+- [ ] Multi-language support
+- [ ] Resume comparison tool
+- [ ] Skills gap analysis with learning path recommendations
+- [ ] Integration with job boards
+- [ ] Resume version history
+- [ ] Export analysis reports
 
-To build and run using Docker:
 
-```bash
-docker build -t my-app .
+## 👨‍💻 Author
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+**Sanket Kharat**
 
-The containerized application can be deployed to any platform that supports Docker, including:
+- GitHub: [@sanketkharat28](https://github.com/sanketkharat28)
+- LinkedIn: [Connect on LinkedIn](https://linkedin.com/in/sanketkharat28)
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+## 🙏 Acknowledgments
 
-### DIY Deployment
+- React Router team for the excellent routing library
+- TailwindCSS for the utility-first CSS framework
+- The open-source community for inspiration and resources
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+## 📞 Support
 
-Make sure to deploy the output of `npm run build`
+If you have any questions or need help, please:
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+- Open an [Issue](https://github.com/sanketkharat28/ai_resume_analyzer/issues)
+- Contact via email (sanketkharat28@gmail.com)
+- Join our community discussions
 
-## Styling
+## ⭐ Show Your Support
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+If you find this project helpful, please consider giving it a ⭐ on GitHub!
 
 ---
 
-Built with ❤️ using React Router.
+**Built with ❤️ by Sanket Kharat**
+
+*Making resume optimization accessible to everyone*
